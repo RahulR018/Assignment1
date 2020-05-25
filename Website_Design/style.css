@@ -24,4 +24,17 @@ body{
 }
 .foot{
     margin-left: 60px;
+    margin-bottom: 15px;
+}
+.fb{
+    background-color: #3b5998;
+    color: white;
+}
+.twt{
+    background-color: #1DA1F2;
+    color: #fff;
+}
+.googleplus{
+    background-color: #db3236;
+    color: #fff;
 }

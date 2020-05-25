@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,12 +18,57 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand titleBar">
         <a class="navbar-brand h1 text-white ml-5" href="./Home.html">HOME</a>
         <a class="navbar-brand h1 text-white mx-3" href="./login.html">LOGIN</a>
         <a class="navbar-brand h1 text-white mx-3" href="./signup.html">SIGNUP</a>
     </nav>
-    
+    <div class="container-fluid titleBar2 py-4">
+        <h1 class="display-3 ml-5 text-white pb-5"><strong>Library</strong></h1>
+    </div>
+    <section id="showcase_signup">
+        <form id="form" class="container col-md-5 signupform bg-white my-4 py-3 border border-light"
+            action="./login.html" onsubmit="return validate()">
+            <div class="form-group ">
+                <h1 class="display-4 text-center">SIGN UP</h1>
+                <!-- <label for="exampleInputEmail1">ENTER VALID EMAIL ADDRESS</label> -->
+                <input class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class=" ">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group ">
+                <!-- <label for="exampleInputPassword1">PASSWORD</label> -->
+                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                <small id="passHelp" class="">Type in a complex password.</small>
+            </div>
+            <div class="form-group ">
+                <input type="password" class="form-control" id="confirmpassword" placeholder="Re-enter Password">
+                <small id="confpassHelp" class=""> </small>
+            </div>
+            <div class="form-group ">
+                <!-- <label for="exampleInputnumber">ENTER PHONE NUMBER</label> -->
+                <input type="tel" class="form-control" id="telephone" placeholder="Enter Phone Number">
+                <small id="teleHelp" class=""> </small>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label mb-2" for="exampleCheck1">RECEIVE TRAVEL RECOMMENDATIONS IN
+                    FUTURE</label>
+            </div>
+            <button id="submit" class="btn btn-success signupbutton container col-sm-12">SIGN UP</button>
+        </form>
+    </section>
+    <footer class="border bt-2">
+        <h1 class="text-muted foot display-5 bold mt-3">Follow Us</h1>
+        <div class=" btn-group foot" role="group">
+            <button class="btn twt">Twitter</button>
+            <button class="btn fb">Facebook</button>
+            <button class="btn googleplus">Google+</button>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
