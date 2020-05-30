@@ -20,45 +20,59 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand titleBar">
-        <a class="navbar-brand h1 text-white ml-5" href="./Home.html">HOME</a>
-        <a class="navbar-brand h1 text-white mx-3" href="./login.html">LOGIN</a>
-        <a class="navbar-brand h1 text-white mx-3" href="./signup.html">SIGNUP</a>
+    <nav class="navbar navbar-expand titleBar py-3">
+        <a class="text-white ml-5" href="#">HOME</a>
+        <a class="text-white ml-4" href="./login.html">LOGIN</a>
+        <a class="text-white ml-4" href="./signup.html">SIGNUP</a>
     </nav>
     <div class="container-fluid titleBar2 py-4">
         <h1 class="display-3 ml-5 text-white pb-5"><strong>Library</strong></h1>
     </div>
-    <section id="showcase_signup">
-        <form id="form" class="container col-md-5 signupform bg-white my-4 py-3 border border-light"
+    <div class="container col">
+        <form id="form" class="container col-md-5 signupform bg-white my-4 py-3 border border-light formShadow"
             action="./login.html" onsubmit="return validate()">
+            <h1 class="display-4 text-center">SIGN UP</h1>
             <div class="form-group ">
-                <h1 class="display-4 text-center">SIGN UP</h1>
-                <!-- <label for="exampleInputEmail1">ENTER VALID EMAIL ADDRESS</label> -->
-                <input class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class=" ">We'll never share your email with anyone else.</small>
+                <input type='' class="form-control" id="fstName" aria-describedby="fstNameHelp"placeholder="First Name">
+                <small id="fstNameHelp" class=" "></small>
             </div>
             <div class="form-group ">
-                <!-- <label for="exampleInputPassword1">PASSWORD</label> -->
+                <input type=''class="form-control" id="lstName" aria-describedby="lstNameHelp" placeholder="Last Name">
+                <small id="lstNameHelp" class=" "></small>
+            </div>
+            <div class="form-group ">
+                <input type="date" class="form-control" id="email" aria-describedby="dobHelp" placeholder="Date Of Birth">
+                <small id="dobHelp" class=" "></small>
+            </div>
+            <div class="media">
+                <p class="mt-2">Please Select Gender</p>
+                <select type =''class="custom-select ml-5 mb-3" style="width: 200px; position: relative;left: 123px;;">
+                    <option value="1 ">Male</option>
+                    <option value="2 ">Female</option>
+                    <option value="3 ">Prefer Not to Say</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class=" " data-toggle="tooltip" title="hey"></small>
+            </div>
+            <div class="form-group ">
                 <input type="password" class="form-control" id="password" placeholder="Enter Password">
-                <small id="passHelp" class="">Type in a complex password.</small>
+                <small id="passHelp" class=""></small>
             </div>
-            <div class="form-group ">
+            <div class="form-group">
                 <input type="password" class="form-control" id="confirmpassword" placeholder="Re-enter Password">
                 <small id="confpassHelp" class=""> </small>
             </div>
             <div class="form-group ">
-                <!-- <label for="exampleInputnumber">ENTER PHONE NUMBER</label> -->
                 <input type="tel" class="form-control" id="telephone" placeholder="Enter Phone Number">
                 <small id="teleHelp" class=""> </small>
             </div>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label mb-2" for="exampleCheck1">RECEIVE TRAVEL RECOMMENDATIONS IN
-                    FUTURE</label>
+            <div class="form-group text-center">
+                <button id="submit" class="btn titleBar text-white signupbutton container col-sm-4">SIGN UP</button>
             </div>
-            <button id="submit" class="btn btn-success signupbutton container col-sm-12">SIGN UP</button>
         </form>
-    </section>
+    </div>
     <footer class="border bt-2">
         <h1 class="text-muted foot display-5 bold mt-3">Follow Us</h1>
         <div class=" btn-group foot" role="group">
@@ -68,7 +82,7 @@
         </div>
     </footer>
     <script src="./script.js"></script>
-    <script src="./script.js"></script>
+    <script src="./signup.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+var dob= document.getElementById('dob')
 var input = document.getElementById('email');
 var pass = document.getElementById('password');
 var confirm = document.getElementById('confirmpassword');
