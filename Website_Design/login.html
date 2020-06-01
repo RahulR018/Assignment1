@@ -20,53 +20,31 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand titleBar">
-        <a class="navbar-brand h1 text-white ml-5" href="./Home.html">HOME</a>
-        <a class="navbar-brand h1 text-white mx-3" href="./login.html">LOGIN</a>
-        <a class="navbar-brand h1 text-white mx-3" href="./signup.html">SIGNUP</a>
+    <nav class="navbar navbar-expand titleBar py-3">
+        <a class="text-white ml-5" href="./Home.html">HOME</a>
+        <a class="text-white ml-4" href="./login.html">LOGIN</a>
+        <a class="text-white ml-4" href="./signup.html">SIGNUP</a>
     </nav>
     <div class="container-fluid titleBar2 py-4">
         <h1 class="display-3 ml-5 text-white pb-5"><strong>Library</strong></h1>
     </div>
-    <section id="showcase_login">
-        <form class="container col-md-5 signupform bg-white my-2 py-3 " action="./districts.html"
+    <div class="container">
+        <form class="container col-md-5 signupform bg-white my-4 py-3 formShadow" action="./Dashboard.html"
             onsubmit="return validate()">
-            <div class="form-group ">
-                <p class="display-4 text-center">LOG IN</p>
-                <label for="exampleInputEmail1">ENTER YOUR REGISTERED EMAIL ADDRESS</label>
-                <input class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <p class="display-4 text-center">LOG IN</p>
+            <div class="form-group">
+                <input type=""  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                 <small id="emailHelp" class=" ">Please enter email you used for signup.</small>
             </div>
             <div class="form-group ">
-                <label for="exampleInputPassword1">ENTER PASSWORD</label>
                 <input type="password" class="form-control" id="pass" placeholder="Password">
                 <small id="passHelp" class="">Type your password.</small>
             </div>
-            <button id="submit" class="btn btn-success signupbutton container col-sm-12">LOG IN</button>
+            <div class="text-center">
+                <button id="submit" class="btn loginbutton container col-sm-4">LOG IN</button>
+            </div>
         </form>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
     <footer class="border bt-2">
         <h1 class="text-muted foot display-5 bold mt-3">Follow Us</h1>
         <div class=" btn-group foot" role="group">
@@ -75,7 +53,6 @@
             <button class="btn googleplus">Google+</button>
         </div>
     </footer>
-    <script src="./script.js"></script>
     <script src="./login.js"></script>
 </body>
 

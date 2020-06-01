@@ -1,7 +1,5 @@
 var input = document.getElementById('email');
 var pass = document.getElementById('pass');
-var confirm = document.getElementById('confirmpassword');
-var phone = document.getElementById('telephone');
 var emailAlert = document.getElementById('emailHelp');
 var passAlert = document.getElementById('passHelp');
 

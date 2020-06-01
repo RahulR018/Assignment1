@@ -1,4 +1,6 @@
-var dob= document.getElementById('dob')
+var FirstName = document.getElementById('fstName')
+var LastName = document.getElementById('lstName');
+var dob = document.getElementById('dob');
 var input = document.getElementById('email');
 var pass = document.getElementById('password');
 var confirm = document.getElementById('confirmpassword');
@@ -9,13 +11,19 @@ var confirmAlert = document.getElementById('confpassHelp');
 var teleAlert = document.getElementById('teleHelp');
 var emaildata = [];
 var passdata = [];
+var namepattern = /[?={}|/\\[\]\.\`\,\;\+\-\"\'\<\>\:\d~!@#$%^&*\s_]/;
 
-
+FirstName.addEventListener('input', fst_validate);
+LastName.addEventListener('input', lst_validate);
+dob.addEventListener('input', dob_validate);
 input.addEventListener('input', email_validate);
 pass.addEventListener('input', pass_validate);
 confirm.addEventListener('input', confirm_validate);
 phone.addEventListener('input', phone_validate);
 
+FirstName.addEventListener('focus', resetfst);
+LastName.addEventListener('focus',resetlst);
+dob.addEventListener('focus',resetdob);
 input.addEventListener('focus', resete);
 pass.addEventListener('focus', resetp);
 confirm.addEventListener('focus', resetconfp);
@@ -23,15 +31,25 @@ phone.addEventListener('focus', resettele);
 
 
 function validate() {
-    if (email_validate() == true && pass_validate() == true && confirm_validate() == true &&
-        phone_validate() == true) {
+    if (fst_validate() == true && lst_validate() == true && dob_validate() == true && email_validate() == true &&
+        pass_validate() == true && confirm_validate() == true && phone_validate() == true) {
         return true;
-    } else if (email_validate() == false && pass_validate() == false && confirm_validate() == false &&
-        phone_validate() == false) {
+    } else if (fst_validate() == false && lst_validate() == false &&
+        dob_validate() == false && email_validate() == false && pass_validate() == false &&
+        confirm_validate() == false && phone_validate() == false) {
+        FirstName.classList.add('error');
+        LastName.classList.add('error');
+        dob.classList.add('error');
         input.classList.add('error');
         pass.classList.add('error');
         confirm.classList.add('error');
         phone.classList.add('error');
+        return false;
+    } else if (fst_validate()==false) {
+        return false;
+    } else if (lst_validate()==false) {
+        return false;
+    } else if (dob_validate()==false) {
         return false;
     } else if (email_validate() == false) {
         input.classList.add('error');
@@ -49,7 +67,37 @@ function validate() {
         return true;
     }
 }
-
+function fst_validate() {
+    if (FirstName.value == "") {
+        FirstName.placeholder = "Type your firstname";
+        return false;
+    } else if (namepattern.test(FirstName.value)) {
+        FirstName.value = FirstName.value.replace(namepattern, '');
+        // FirstName.placeholder='No Numbers Here';
+        return false;
+    } else {
+        return true;
+    }
+}
+function lst_validate() {
+    if (LastName.value == "") {
+        LastName.placeholder = "Type your firstname";
+        return false;
+    } else if (namepattern.test(LastName.value)) {
+        LastName.value = LastName.value.replace(namepattern, '');
+        // FirstName.placeholder='No Numbers Here';
+        return false;
+    } else {
+        return true;
+    }
+}
+function dob_validate() {
+    if (dob.value == '') {
+        return false;
+    } else {
+        return true;
+    }
+}
 function phone_validate() {
     if (phone.value == '') {
         phone.placeholder = "This field cannot be empty";
@@ -128,7 +176,18 @@ function email_validate() {
     }
 }
 
-
+function resetfst(){
+    document.querySelector('input#fstName').classList.remove('error');
+}
+function resetlst(){
+    document.querySelector('input#lstName').classList.remove('error');
+}
+function resetfst(){
+    document.querySelector('input#fstName').classList.remove('error');
+}
+function resetdob() {
+    document.querySelector('input#dob').classList.remove('error');
+}
 function resete() {
     document.querySelector('input#email').classList.remove('error');
 }
